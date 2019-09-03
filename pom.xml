@@ -6,11 +6,14 @@
 	<groupId>com.ricston.mule</groupId>
 	<artifactId>mule-maven-parent-pom</artifactId>
 	<version>1.0.0</version>
-
 	<packaging>pom</packaging>
 	<name>Mule mule-maven-parent-pom Application</name>
 	<description>Example Parent POM for Mule 4 Applications</description>
 
+
+	<modules>
+		<module>ricston-hello-world</module>
+	</modules>
 
 	<!-- mvn clean install -Dgpg.skip -->
 
