@@ -5,10 +5,17 @@ pipeline {
   }
   stages {
     
+    stage('Unit Test') { 
+      steps {
+      echo '********************************** Unit Test Stage **********************************'
+        sh 'mvn clean install -DskipTests'
+      }
+    }
+    
     stage('Deploy Standalone') { 
-      steps {\
-       echo '======================== Deploy Standalone Version. ========================' 
-        sh 'mvn --projects ricston-hello-world --also-make clean deploy -P standalone -DmuleDeploy -X'
+      steps {
+       echo '********************************** Deploy Standalone Version. **********************************' 
+        sh 'mvn deploy -P standalone -DmuleDeploy -X'
       }
     }
     
@@ -19,8 +26,8 @@ pipeline {
         ANYPOINT_CREDENTIALS = credentials('anypoint.credentials')
       }
       steps {
-      echo '======================== Deploy CloudHub Version. ========================'
-        sh 'mvn clean deploy -P cloudhub -DmuleDeploy -Danypoint.username=${ANYPOINT_CREDENTIALS_USR}  -Danypoint.password=${ANYPOINT_CREDENTIALS_PSW} -X' 
+      echo '********************************** Deploy CloudHub Version **********************************'
+        sh 'mvn deploy -P cloudhub -DmuleDeploy -Danypoint.username=${ANYPOINT_CREDENTIALS_USR}  -Danypoint.password=${ANYPOINT_CREDENTIALS_PSW} -X' 
       }
     }
   }
