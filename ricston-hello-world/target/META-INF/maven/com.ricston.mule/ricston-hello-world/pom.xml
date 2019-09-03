@@ -18,7 +18,7 @@
 
 	<properties>
 		<mule.home>/opt/mule-enterprise-standalone-4.2.1</mule.home>
-		<mule.version>4.2.1</mule.version>
+		<mule.version>4.1.1</mule.version>
 
 		<cloundhub.env>Sandbox</cloundhub.env>
 		<cloudhub.businessGroup>Ricston Ltd/Temp-Bassem</cloudhub.businessGroup>

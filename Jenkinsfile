@@ -12,7 +12,7 @@ pipeline {
     
     stage('Deploy Standalone') { 
       steps {
-        sh 'mvn deploy -P standalone -DmuleDeploy -X'
+        sh 'mvn --projects ricston-hello-world --also-make clean deploy -P standalone -DmuleDeploy -X'
       }
     }
     
@@ -23,7 +23,7 @@ pipeline {
         ANYPOINT_CREDENTIALS = credentials('anypoint.credentials')
       }
       steps {
-        sh 'mvn deploy -P cloudhub -DmuleDeploy -Danypoint.username=${ANYPOINT_CREDENTIALS_USR}  -Danypoint.password=${ANYPOINT_CREDENTIALS_PSW} -X' 
+        sh 'mvn clean deploy -P cloudhub -DmuleDeploy -Danypoint.username=${ANYPOINT_CREDENTIALS_USR}  -Danypoint.password=${ANYPOINT_CREDENTIALS_PSW} -X' 
       }
     }
   }

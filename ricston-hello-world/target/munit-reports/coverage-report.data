@@ -17,7 +17,16 @@
               "lineNumber": 12
             }
           ],
-          "coveredLocations": []
+          "coveredLocations": [
+            {
+              "path": "hello-worldFlow/processors/1",
+              "lineNumber": 13
+            },
+            {
+              "path": "hello-worldFlow/processors/0",
+              "lineNumber": 12
+            }
+          ]
         }
       ]
     }
