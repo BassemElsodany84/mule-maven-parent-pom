@@ -53,7 +53,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<app.runtime>4.1.1</app.runtime>
+		<app.runtime>4.2.1</app.runtime>
 		<munit.version>2.1.2</munit.version>
 		<mule.maven.plugin.version>3.2.7</mule.maven.plugin.version>
 
