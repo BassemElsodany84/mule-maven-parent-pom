@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<parent>
+		<groupId>com.ricston.mule</groupId>
+		<artifactId>mule-maven-parent-pom</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<!-- mvn clean deploy -P standalone -DmuleDeploy -->
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>ricston-hello-world</artifactId>
+	<packaging>mule-application</packaging>
+	<name>ricston-hello-world</name>
+	<version>1.0.0</version>
+
+	<properties>
+		<mule.home>/opt/mule-enterprise-standalone-4.2.1</mule.home>
+		<mule.version>4.2.1</mule.version>
+
+		<cloundhub.env>Sandbox</cloundhub.env>
+		<cloudhub.businessGroup>Ricston Ltd/Temp-Bassem</cloudhub.businessGroup>
+		<cloudhub.businessGroupId>6393bd4c-7a82-4309-a5ac-7fc0809fe5de</cloudhub.businessGroupId>
+		<cloudhub.workers>2</cloudhub.workers>
+		<cloudhub.workerType>MICRO</cloudhub.workerType>
+		<cloudhub.anypoint.uri>https://anypoint.mulesoft.com</cloudhub.anypoint.uri>
+		<cloudhub.region>eu-west-1</cloudhub.region>
+		<cloudhub.analytics.agent.enabled>true</cloudhub.analytics.agent.enabled>
+	</properties>
+
+	<build>
+		<testResources>
+			<testResource>
+				<directory>src/test/munit</directory>
+				<filtering>true</filtering>
+			</testResource>
+		</testResources>
+		<plugins>
+			<plugin>
+				<groupId>com.mulesoft.munit.tools</groupId>
+				<artifactId>munit-maven-plugin</artifactId>
+				<version>${munit.version}</version>
+				<executions>
+					<execution>
+						<id>test</id>
+						<phase>test</phase>
+						<goals>
+							<goal>test</goal>
+							<goal>coverage-report</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<coverage>
+						<runCoverage>true</runCoverage>
+						<formats>
+							<format>html</format>
+						</formats>
+					</coverage>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.mule.connectors</groupId>
+			<artifactId>mule-http-connector</artifactId>
+			<version>${http.connector.version}</version>
+			<classifier>mule-plugin</classifier>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mule.connectors</groupId>
+			<artifactId>mule-sockets-connector</artifactId>
+			<version>${sockets.connector.version}</version>
+			<classifier>mule-plugin</classifier>
+		</dependency>
+		<dependency>
+			<groupId>com.mulesoft.munit</groupId>
+			<artifactId>munit-runner</artifactId>
+			<version>${munit.version}</version>
+			<classifier>mule-plugin</classifier>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.mulesoft.munit</groupId>
+			<artifactId>munit-tools</artifactId>
+			<version>${munit.version}</version>
+			<classifier>mule-plugin</classifier>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+</project>

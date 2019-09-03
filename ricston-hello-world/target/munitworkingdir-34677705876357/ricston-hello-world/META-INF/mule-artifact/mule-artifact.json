@@ -1,0 +1,26 @@
+{
+  "configs": [
+    "test-suite.xml",
+    "hello-world.xml"
+  ],
+  "secureProperties": [],
+  "redeploymentEnabled": true,
+  "name": "hello-world",
+  "minMuleVersion": "4.1.1",
+  "requiredProduct": "MULE_EE",
+  "classLoaderModelLoaderDescriptor": {
+    "id": "mule",
+    "attributes": {
+      "exportedResources": [
+        "log4j2.xml",
+        "mule-artifact.properties",
+        "log4j2-test.xml"
+      ],
+      "includeTestDependencies": "true"
+    }
+  },
+  "bundleDescriptorLoader": {
+    "id": "mule",
+    "attributes": {}
+  }
+}

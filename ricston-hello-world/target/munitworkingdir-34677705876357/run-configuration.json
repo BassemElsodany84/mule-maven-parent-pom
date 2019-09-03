@@ -1,0 +1,55 @@
+{
+  "runToken": "6d6b86b8-f2fe-4c25-b7b4-f7dcd1796d92",
+  "projectName": "ricston-hello-world",
+  "domainLocation": "",
+  "tags": [],
+  "testNames": [],
+  "suitePaths": [
+    "test-suite.xml"
+  ],
+  "skipAfterFailure": false,
+  "notifierConfigurations": [
+    {
+      "clazz": "org.mule.munit.remote.notifiers.ConsoleNotifier",
+      "parameters": [
+        {
+          "name": "runToken",
+          "type": "java.lang.String",
+          "value": "6d6b86b8-f2fe-4c25-b7b4-f7dcd1796d92"
+        }
+      ]
+    }
+  ],
+  "coverageConfiguration": {
+    "runCoverage": true,
+    "randomizeCoveragePort": true,
+    "suitePaths": [
+      "test-suite.xml"
+    ],
+    "ignoredFiles": [],
+    "ignoredFlowNames": []
+  },
+  "containerConfiguration": {
+    "runtimeId": "4.1.1",
+    "product": "MULE_EE",
+    "munitWorkingDirectoryPath": "/Users/bassemelsodany/AnypointStudio/studio-workspace/mule-maven-parent-pom/ricston-hello-world/target/munitworkingdir-34677705876357",
+    "log4JConfigurationFilePath": "/Users/bassemelsodany/AnypointStudio/studio-workspace/mule-maven-parent-pom/ricston-hello-world/target/classes/log4j2.xml",
+    "mavenConfiguration": {
+      "settingsXmlFilePath": "/Users/bassemelsodany/.m2/settings.xml",
+      "globalSettingsXmlFilePath": "/opt/apache-maven-3.6.1/conf/settings.xml",
+      "mavenRepositoryDirectoryPath": "/Users/bassemelsodany/.m2/repository",
+      "offlineMode": false,
+      "forcePolicyUpdate": true,
+      "ignoreArtifactDescriptorRepositories": false
+    },
+    "serverPluginConfigurations": [
+      {
+        "groupId": "com.mulesoft.munit.plugins",
+        "artifactId": "munit-coverage-plugin",
+        "version": "2.1.2",
+        "type": "jar",
+        "classifier": "mule-server-plugin"
+      }
+    ]
+  }
+}
