@@ -3,8 +3,8 @@
     "hello-world.xml"
   ],
   "redeploymentEnabled": true,
-  "name": "hello-world",
-  "minMuleVersion": "4.1.1",
+  "name": "ricston-hello-world",
+  "minMuleVersion": "4.2.1",
   "requiredProduct": "MULE_EE",
   "classLoaderModelLoaderDescriptor": {
     "id": "mule",
