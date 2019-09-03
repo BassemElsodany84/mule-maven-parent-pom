@@ -15,7 +15,7 @@ pipeline {
     stage('Deploy Standalone') { 
       steps {
        echo '********************************** Deploy Standalone Version. **********************************' 
-        sh 'mvn deploy -P standalone -DmuleDeploy -X'
+        sh 'mvn package deploy -P standalone -DmuleDeploy -X'
       }
     }
     
@@ -27,7 +27,7 @@ pipeline {
       }
       steps {
       echo '********************************** Deploy CloudHub Version **********************************'
-        sh 'mvn deploy -P cloudhub -DmuleDeploy -Danypoint.username=${ANYPOINT_CREDENTIALS_USR}  -Danypoint.password=${ANYPOINT_CREDENTIALS_PSW} -X' 
+        sh 'mvn package deploy -P cloudhub -DmuleDeploy -Danypoint.username=${ANYPOINT_CREDENTIALS_USR}  -Danypoint.password=${ANYPOINT_CREDENTIALS_PSW} -X' 
       }
     }
   }
