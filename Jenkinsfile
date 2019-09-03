@@ -5,12 +5,6 @@ pipeline {
   }
   stages {
     
-    # stage('Unit Test') { 
-     #  steps {
-      #   sh 'mvn clean test -X'
-      # }
-   #  }
-    
     stage('Deploy Standalone') { 
       steps {\
        echo '======================== Deploy Standalone Version. ========================' 
