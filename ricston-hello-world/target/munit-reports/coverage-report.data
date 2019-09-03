@@ -9,22 +9,22 @@
           "type": "FLOW",
           "locations": [
             {
-              "path": "hello-worldFlow/processors/1",
-              "lineNumber": 13
-            },
-            {
               "path": "hello-worldFlow/processors/0",
               "lineNumber": 12
+            },
+            {
+              "path": "hello-worldFlow/processors/1",
+              "lineNumber": 13
             }
           ],
           "coveredLocations": [
             {
-              "path": "hello-worldFlow/processors/1",
-              "lineNumber": 13
-            },
-            {
               "path": "hello-worldFlow/processors/0",
               "lineNumber": 12
+            },
+            {
+              "path": "hello-worldFlow/processors/1",
+              "lineNumber": 13
             }
           ]
         }
