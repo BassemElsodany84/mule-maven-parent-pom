@@ -154,6 +154,9 @@
 								<uri>${anypoint.uri}</uri>
 								<workerType>${cloudhub.workerType}</workerType>
 								<workers>${cloudhub.workers}</workers>
+								<properties>
+									<anypoint.platform.config.analytics.agent.enabled>${cloudhub.analytics.agent.enabled}</anypoint.platform.config.analytics.agent.enabled>
+								</properties>
 							</cloudHubDeployment>
 						</configuration>
 						<executions>
