@@ -20,7 +20,7 @@
         <dom4jVersion>1.6.1</dom4jVersion>
         <bouncyCastleVersion>1.59</bouncyCastleVersion>
         <cxfVersion>3.2.1</cxfVersion>
-        <xmlSecVersion>2.0.6</xmlSecVersion>
+        <xmlSecVersion>2.1.7</xmlSecVersion>
         <xmlUnitVersion>1.6</xmlUnitVersion>
         <jettyVersion>9.4.6.v20170531</jettyVersion>
         <springVersion>4.1.9.RELEASE</springVersion>
